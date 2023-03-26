@@ -1,7 +1,10 @@
 package com.example.votersApp.repository;
 
-import com.example.votersApp.data.model.AppUserDetails;
+import com.example.votersApp.data.model.AppUser;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface AppUserRepository extends JpaRepository<AppUserDetails, Long> {
+import java.util.Optional;
+
+public interface AppUserRepository extends JpaRepository<AppUser, Long> {
+    Optional<AppUser> findByEmail(String email);
 }

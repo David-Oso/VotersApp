@@ -9,18 +9,18 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@AllArgsConstructor
-@NoArgsConstructor
 @Getter
 @Setter
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 public class Address {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+    private int houseNumber;
     private String street;
     private String city;
     private String state;
     private String country;
-    private int houseNumber;
 }
